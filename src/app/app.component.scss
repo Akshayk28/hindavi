@@ -1,11 +1,11 @@
 .bgimage {
-    background-image: url('../assets/img/b2.jpg');
+    background-image: url('../assets/img/vecation2.jpeg');
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    height: 600px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-size: contain;
+    // background-attachment: fixed;
+    height: 650px;
+    // background-color: rgba(0, 0, 0, 0.5);
 }
 
 .overlay {
@@ -132,8 +132,8 @@
     line-height: 1em;
     text-transform: uppercase;
     font-weight: 700;
-    border-color: #fb2056;
-    background-color: #fb2056;
+    border-color: #e73e0a;
+    background-color: #e73e0a;
     color: #FFFFFF !important;
     width: 68%;
     /* align-items: center; */
@@ -143,7 +143,7 @@
 }
 
 .below-title-text {
-    color: goldenrod !important;
+    color: #85868f !important;
 }
 
 .upcoming-title {
@@ -215,4 +215,30 @@
 .btn-div {
     width: 50%;
     margin: auto;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    /* Center the logo horizontally */
+    align-items: center;
+    /* Center the logo vertically */
+}
+
+.logo {
+    width: 128px;
+    /* Adjust width */
+    height: auto;
+    /* Maintain aspect ratio */
+    max-width: 200px;
+    /* Set a max size */
+}
+
+.nav-item {
+    padding: 0px 20px;
+}
+
+.nav-link {
+    font-weight: 700;
+    cursor: pointer;
 }

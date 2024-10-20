@@ -1,185 +1,123 @@
+<header>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <div class="logo-container">
+        <img src="../assets/img/logo.png" alt="Logo" class="logo">
+      </div>
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <ul class="navbar-nav  mb-2 mb-lg-0">
+        <li class="nav-item"><a aria-current="page" class="nav-link">Home</a></li>
+        <li class="nav-item"><a class="nav-link">About</a></li>
+        <li class="nav-item"><a class="nav-link">Services</a></li>
+        <li class="nav-item"><a class="nav-link">Packages</a></li>
+        <li class="nav-item"><a class="nav-link">Vehicles</a></li>
+        <li class="nav-item"><a class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
 <section>
   <div class="bgimage"></div>
   <div id="cards_landscape_wrap-2">
-      <div class="container">
-          <div class="row">
-              <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4" *ngFor="let car of cars">
-                  <a href="tel:+918378889449">
-                      <div class="card-flyer card-body">
-                          <div class="text-box">
-                              <div class="image-box">
-                                  <img src={{car.img}} alt="" />
-                              </div>
-                              <div class="text-container">
-                                  <h6>{{car.name}}</h6>
-                                  <p class="below-title-text">{{car.seats}} Seater</p>
-                              </div>
-                              <div class="middle-text">
-                                  <p>Click & Check Local & Outstation Charges</p>
-                              </div>
-                              <div>
-                                  <button class="card-btn" href="tel:+918378889449">Inquiry / Book Car</button>
-                              </div>
-                          </div>
-                      </div>
-                  </a>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3" *ngFor="let car of cars">
+          <a href="tel:+918378889449">
+            <div class="card-flyer card-body">
+              <div class="text-box">
+                <div class="image-box">
+                  <img src={{car.img}} alt="" />
+                </div>
+                <div class="text-container">
+                  <h6>{{car.name}}</h6>
+                  <p class="below-title-text">{{car.seats}} Seater</p>
+                </div>
+                <div class="middle-text">
+                  <p>Click & Check Local & Outstation Charges</p>
+                </div>
+                <div>
+                  <button class="card-btn" href="tel:+918378889449">Inquiry / Book Car</button>
+                </div>
               </div>
-              <div class="mt-5 btn-div">
-                  <a class="card-btn" (click)="openPleaces()">Find your best option ></a>
-              </div>
-          </div>
-          <div class="row mt-5">
-              <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                  <div id="carouselExampleDark" class="carousel carousel-dark slide">
-                      <div class="carousel-indicators">
-                          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0"
-                              class="active" aria-current="true" aria-label="Slide 1"></button>
-                          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
-                              aria-label="Slide 2"></button>
-                          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
-                              aria-label="Slide 3"></button>
-                      </div>
-                      <div class="carousel-inner">
-                          <div class="carousel-item active" data-bs-interval="10000">
-                              <img src="../../assets/img/b2.jpg" class="d-block w-100" alt="...">
-                              <div class="carousel-caption d-none d-md-block">
-                                  <!-- <h5>First slide label</h5>
-                                  <p>Some representative placeholder content for the first slide.</p> -->
-                              </div>
-                          </div>
-                          <div class="carousel-item" data-bs-interval="2000">
-                              <img src="../../assets/img/b2.jpg" class="d-block w-100" alt="...">
-                              <div class="carousel-caption d-none d-md-block">
-                              </div>
-                          </div>
-                          <div class="carousel-item">
-                              <img src="../../assets/img/b2.jpg" class="d-block w-100" alt="...">
-                              <div class="carousel-caption d-none d-md-block">
-                              </div>
-                          </div>
-                      </div>
-                      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
-                          data-bs-slide="prev">
-                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Previous</span>
-                      </button>
-                      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
-                          data-bs-slide="next">
-                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Next</span>
-                      </button>
-                  </div>
-              </div>
-              <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                  <div id="carouselExampleDark" class="carousel carousel-dark slide">
-                      <div class="carousel-indicators">
-                          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0"
-                              class="active" aria-current="true" aria-label="Slide 1"></button>
-                          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
-                              aria-label="Slide 2"></button>
-                          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
-                              aria-label="Slide 3"></button>
-                      </div>
-                      <div class="carousel-inner">
-                          <div class="carousel-item active" data-bs-interval="10000">
-                              <img src="../../assets/img/b2.jpg" class="d-block w-100" alt="...">
-                              <div class="carousel-caption d-none d-md-block">
-                              </div>
-                          </div>
-                          <div class="carousel-item" data-bs-interval="2000">
-                              <img src="../../assets/img/b2.jpg" class="d-block w-100" alt="...">
-                              <div class="carousel-caption d-none d-md-block">
-                              </div>
-                          </div>
-                          <div class="carousel-item">
-                              <img src="../../assets/img/b2.jpg" class="d-block w-100" alt="...">
-                              <div class="carousel-caption d-none d-md-block">
-                              </div>
-                          </div>
-                      </div>
-                      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
-                          data-bs-slide="prev">
-                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Previous</span>
-                      </button>
-                      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
-                          data-bs-slide="next">
-                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Next</span>
-                      </button>
-                  </div>
-              </div>
-          </div>
-          <div class="row mt-5">
-              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                  <div>
-                      <h2 class="upcoming-title">Upcoming Tours &amp; Destination</h2>
-                  </div>
-              </div>
-          </div>
-          <div class="row mt-5" id="upcoming-cards">
-              <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                  <a href="tel:+918378889449">
-                      <div class="card d-flex position-relative flex-column">
-                          <div class='imgContainer'>
-                              <img src='../../assets/img/Shirdi.jpg'>
-                          </div>
-                          <div class="content">
-                              <h4>Shirdi Darshan</h4>
-                              <p></p>
-                          </div>
-                      </div>
-                  </a>
-              </div>
-              <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                  <a href="tel:+918378889449">
-                      <div class="card d-flex position-relative flex-column">
-                          <div class='imgContainer'>
-                              <img src='../../assets/img/bhimashankar.webp'>
-                          </div>
-                          <div class="content">
-                              <h4>Bhimashankar</h4>
-                              <p></p>
-                          </div>
-                      </div>
-                  </a>
-              </div>
-              <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                  <a href="tel:+918378889449">
-                      <div class="card d-flex position-relative flex-column">
-                          <div class='imgContainer'>
-                              <img src='../../assets/img/nashik.jpg'>
-                          </div>
-                          <div class="content">
-                              <h4>Nashik</h4>
-                              <p></p>
-                          </div>
-                      </div>
-                  </a>
-              </div>
-              <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                  <a href="tel:+918378889449">
-                      <div class="card d-flex position-relative flex-column">
-                          <div class='imgContainer'>
-                              <img src='../../assets/img/konkan.jpg'>
-                          </div>
-                          <div class="content">
-                              <h4>Konkan</h4>
-                              <p></p>
-                          </div>
-                      </div>
-                  </a>
-              </div>
-              <div class="mt-3">
-                  <div class="elementor-widget-container">
-                      <p>“Exciting adventures await! Check out our upcoming tours and destinations for your next
-                          unforgettable journey.”</p>
-                  </div>
-              </div>
-              <div class="mt-3 btn-div">
-                  <a class="card-btn" (click)="openPleaces()">More Place</a>
-              </div>
-          </div>
+            </div>
+          </a>
+        </div>
+        <div class="mt-5 btn-div">
+          <a class="card-btn" (click)="openPleaces()">Find your best option ></a>
+        </div>
       </div>
+      <div class="row mt-5">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <div>
+            <h2 class="upcoming-title">Upcoming Tours &amp; Destination</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-5" id="upcoming-cards">
+        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+          <a href="tel:+918378889449">
+            <div class="card d-flex position-relative flex-column">
+              <div class='imgContainer'>
+                <img src='../../assets/img/Shirdi.jpg'>
+              </div>
+              <div class="content">
+                <h4>Shirdi Darshan</h4>
+                <p></p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+          <a href="tel:+918378889449">
+            <div class="card d-flex position-relative flex-column">
+              <div class='imgContainer'>
+                <img src='../../assets/img/bhimashankar.webp'>
+              </div>
+              <div class="content">
+                <h4>Bhimashankar</h4>
+                <p></p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+          <a href="tel:+918378889449">
+            <div class="card d-flex position-relative flex-column">
+              <div class='imgContainer'>
+                <img src='../../assets/img/nashik.jpg'>
+              </div>
+              <div class="content">
+                <h4>Nashik</h4>
+                <p></p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+          <a href="tel:+918378889449">
+            <div class="card d-flex position-relative flex-column">
+              <div class='imgContainer'>
+                <img src='../../assets/img/konkan.jpg'>
+              </div>
+              <div class="content">
+                <h4>Konkan</h4>
+                <p></p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="mt-3">
+          <div class="elementor-widget-container">
+            <p>“Exciting adventures await! Check out our upcoming tours and destinations for your next
+              unforgettable journey.”</p>
+          </div>
+        </div>
+        <div class="mt-3 btn-div">
+          <a class="card-btn" (click)="openPleaces()">More Place</a>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
