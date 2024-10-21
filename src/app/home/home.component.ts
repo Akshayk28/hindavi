@@ -1,16 +1,14 @@
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { Component, Inject, NO_ERRORS_SCHEMA, PLATFORM_ID } from '@angular/core';
 import { ActivatedRoute, Router, RouterOutlet } from '@angular/router';
-
 @Component({
-  selector: 'app-root',
+  selector: 'app-home',
   standalone: true,
   imports: [RouterOutlet, CommonModule],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
-  schemas: [NO_ERRORS_SCHEMA],
+  templateUrl: './home.component.html',
+  styleUrl: './home.component.scss',
 })
-export class AppComponent {
+export class HomeComponent {
   title = 'hindavi';
 
   cars = [
@@ -32,36 +30,8 @@ export class AppComponent {
     this.router.navigate(['places']);
   }
 
-  ngOnInit() {
-
-    // Toggle the 'active' class when the menu icon is clicked
-    if (isPlatformBrowser(this.platformId)) {
-      const menuIcon = document.getElementById('menu-icon');
-      const navLinks = document.getElementById('nav-links');
-      if (menuIcon != null) {
-        menuIcon.addEventListener('click', () => {
-          if (navLinks != null) {
-            navLinks.classList.toggle('active');
-          }
-        });
-      }
-    }
-  }
-
-  navigateToContact() {
-    this.router.navigate(['contact']);
-  }
-
-  navigateToHome() {
-    this.router.navigate(['']);
-  }
-
   openCars() {
     this.router.navigate(['vehicles']);
-  }
-
-  navigateToAbout() {
-    this.router.navigate(['about']);
   }
 
 }

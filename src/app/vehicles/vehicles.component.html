@@ -1,0 +1,27 @@
+<div id="cards_landscape_wrap-2">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3" *ngFor="let car of cars">
+                <a href="tel:+918378889449">
+                    <div class="card-flyer card-body">
+                        <div class="text-box">
+                            <div class="image-box">
+                                <img src={{car.img}} alt="" />
+                            </div>
+                            <div class="text-container">
+                                <h6>{{car.name}}</h6>
+                                <p class="below-title-text">{{car.seats}} Seater</p>
+                            </div>
+                            <div class="middle-text">
+                                <p>Click & Check Local & Outstation Charges</p>
+                            </div>
+                            <div>
+                                <button class="card-btn" href="tel:+918378889449">Inquiry / Book Car</button>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

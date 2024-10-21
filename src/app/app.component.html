@@ -1,123 +1,29 @@
 <header>
   <nav class="navbar navbar-expand-lg">
-    <div class="container">
-      <div class="logo-container">
-        <img src="../assets/img/logo.png" alt="Logo" class="logo">
+      <div class="container">
+          <div class="row">
+              <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xs-6">
+                  <div class="logo-container">
+                      <img src="../assets/img/logo.png" alt="Logo" class="logo" (click)="navigateToHome()">
+                  </div>
+              </div>
+              <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xs-6 marginAuto">
+                  <div class="menu-icon" id="menu-icon">
+                      <span class="bar"></span>
+                      <span class="bar"></span>
+                      <span class="bar"></span>
+                  </div>
+                  <ul class="navbar-nav  mb-2 mb-lg-0 nav-links" id="nav-links">
+                      <li class="nav-item"><a aria-current="page" class="nav-link" href="">Home</a></li>
+                      <li class="nav-item"><a class="nav-link" (click)="navigateToAbout()">About</a></li>
+                      <!-- <li class="nav-item"><a class="nav-link">Services</a></li>
+                      <li class="nav-item"><a class="nav-link">Packages</a></li> -->
+                      <li class="nav-item"><a class="nav-link" (click)="openCars()">Vehicles</a></li>
+                      <li class="nav-item"><a class="nav-link" (click)="navigateToContact()">Contact</a></li>
+                  </ul>
+              </div>
+          </div>
       </div>
-      <label for="check" class="checkbtn">
-        <i class="fas fa-bars"></i>
-      </label>
-      <ul class="navbar-nav  mb-2 mb-lg-0">
-        <li class="nav-item"><a aria-current="page" class="nav-link">Home</a></li>
-        <li class="nav-item"><a class="nav-link">About</a></li>
-        <li class="nav-item"><a class="nav-link">Services</a></li>
-        <li class="nav-item"><a class="nav-link">Packages</a></li>
-        <li class="nav-item"><a class="nav-link">Vehicles</a></li>
-        <li class="nav-item"><a class="nav-link">Contact</a></li>
-      </ul>
-    </div>
   </nav>
 </header>
-<section>
-  <div class="bgimage"></div>
-  <div id="cards_landscape_wrap-2">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3" *ngFor="let car of cars">
-          <a href="tel:+918378889449">
-            <div class="card-flyer card-body">
-              <div class="text-box">
-                <div class="image-box">
-                  <img src={{car.img}} alt="" />
-                </div>
-                <div class="text-container">
-                  <h6>{{car.name}}</h6>
-                  <p class="below-title-text">{{car.seats}} Seater</p>
-                </div>
-                <div class="middle-text">
-                  <p>Click & Check Local & Outstation Charges</p>
-                </div>
-                <div>
-                  <button class="card-btn" href="tel:+918378889449">Inquiry / Book Car</button>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="mt-5 btn-div">
-          <a class="card-btn" (click)="openPleaces()">Find your best option ></a>
-        </div>
-      </div>
-      <div class="row mt-5">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-          <div>
-            <h2 class="upcoming-title">Upcoming Tours &amp; Destination</h2>
-          </div>
-        </div>
-      </div>
-      <div class="row mt-5" id="upcoming-cards">
-        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-          <a href="tel:+918378889449">
-            <div class="card d-flex position-relative flex-column">
-              <div class='imgContainer'>
-                <img src='../../assets/img/Shirdi.jpg'>
-              </div>
-              <div class="content">
-                <h4>Shirdi Darshan</h4>
-                <p></p>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-          <a href="tel:+918378889449">
-            <div class="card d-flex position-relative flex-column">
-              <div class='imgContainer'>
-                <img src='../../assets/img/bhimashankar.webp'>
-              </div>
-              <div class="content">
-                <h4>Bhimashankar</h4>
-                <p></p>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-          <a href="tel:+918378889449">
-            <div class="card d-flex position-relative flex-column">
-              <div class='imgContainer'>
-                <img src='../../assets/img/nashik.jpg'>
-              </div>
-              <div class="content">
-                <h4>Nashik</h4>
-                <p></p>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-          <a href="tel:+918378889449">
-            <div class="card d-flex position-relative flex-column">
-              <div class='imgContainer'>
-                <img src='../../assets/img/konkan.jpg'>
-              </div>
-              <div class="content">
-                <h4>Konkan</h4>
-                <p></p>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="mt-3">
-          <div class="elementor-widget-container">
-            <p>“Exciting adventures await! Check out our upcoming tours and destinations for your next
-              unforgettable journey.”</p>
-          </div>
-        </div>
-        <div class="mt-3 btn-div">
-          <a class="card-btn" (click)="openPleaces()">More Place</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<router-outlet></router-outlet>
