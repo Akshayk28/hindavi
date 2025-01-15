@@ -23,6 +23,18 @@ export class HomeComponent {
     // { name: 'Shirdi', img: '../../assets/img/Shirdi.jpg' },
   ];
 
+  teams = [
+    { img: '../../assets/img/Team 1.jpeg' },
+    { img: '../../assets/img/Team 2.jpeg' },
+    { img: '../../assets/img/Team 3.jpeg' },
+    { img: '../../assets/img/Team 4.jpeg' },
+    { img: '../../assets/img/Team 5.jpeg' },
+    { img: '../../assets/img/Team 6.jpeg' },
+    { img: '../../assets/img/Team 7.jpeg' },
+    { img: '../../assets/img/Team 8.jpeg' },
+    { img: '../../assets/img/Team 9.jpeg' },
+  ]
+
 
   constructor(private route: ActivatedRoute, private router: Router, @Inject(PLATFORM_ID) private platformId: Object) { }
 
